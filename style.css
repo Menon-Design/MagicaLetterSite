@@ -1,5 +1,5 @@
 @charset "utf-8";
-html {
+html{
 	scroll-behavior: smooth;
 }
 body{
@@ -16,20 +16,82 @@ img{
 	max-width: 100%;
 	height: auto;
 }
-section {
+section{
 	position: relative;
 }
 a{
 	text-decoration: none;
 }
 
-@font-face {
+@font-face{
     font-family: 'MagicaLetter';
     src: url('MagicaLetter.woff2') format('woff2'),
          url('MagicaLetter.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+@keyframes loading{
+	70%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+@keyframes rotate {
+	70% {
+		transform: rotateX(0deg);
+	}
+	100% {
+		transform: rotateX(360deg);
+	}
+}
 
+.load{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: #bba283;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: loading 3.5s forwards;
+	animation-fill-mode: forwards;
+}
+.load_txt{
+    font-size: 9vw;
+    color: #6e5949;
+    display: flex;
+	align-items: center;
+	position: relative;
+	gap: 0.5vw;
+}
+.load_txt span{
+	display: inline-block;
+	animation: rotate 2s infinite linear;
+	text-transform: uppercase;
+}
+.load_txt span:nth-child(2){
+	animation-delay: 0.1s;
+}
+.load_txt span:nth-child(3){
+	animation-delay: 0.2s;
+}
+.load_txt span:nth-child(4){
+	animation-delay: 0.3s;
+}
+.load_txt span:nth-child(5){
+	animation-delay: 0.4s;
+}
+.load_txt span:nth-child(6){
+	animation-delay: 0.5s;
+}
+.load_txt span:nth-child(7){
+	animation-delay: 0.6s;
 }
 
 .back{
@@ -89,7 +151,7 @@ a{
 	font-size: 3vw;
 	color: #6e5949;
 	position: absolute;
-	transform: translate(308%, 110%);
+	transform: translate(305%, 110%);
 }
 .about_img1{
 	width: 52%;
