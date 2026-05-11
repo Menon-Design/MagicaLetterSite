@@ -50,7 +50,7 @@ a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation-fill-mode: forwards;
+	transition: all 1s;
 }
 .load_txt{
     font-size: 9vw;
