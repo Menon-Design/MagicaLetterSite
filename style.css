@@ -59,7 +59,7 @@ a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation: loading 3.5s forwards;
+	animation: loading 5s forwards;
 	animation-fill-mode: forwards;
 }
 .load_txt{
